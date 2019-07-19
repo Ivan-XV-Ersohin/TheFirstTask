@@ -1,4 +1,5 @@
 package building;
 
-public class IShow {
+public interface IShow {
+    void show();
 }

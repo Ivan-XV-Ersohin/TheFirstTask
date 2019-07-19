@@ -1,12 +1,15 @@
 package building;
 
-        import com.sun.istack.internal.NotNull;
-        import sun.invoke.empty.Empty;
-
-public abstract class Building {
-    protected String material;
+public abstract class Building implements IShow{
+    private String material;
     private String buffer;
-    public building(String material){
+
+    @Override
+    public void show(){
+        System.out.println(material + " by interface");
+    }
+
+    public Building(String material){
         this.material = material;
         this.buffer = material;
     }
@@ -15,21 +18,21 @@ public abstract class Building {
         return material;
     }
 
-    public void setMaterial(@NotNull String material){
+    public void setMaterial(String material){
         if (!material.isEmpty()){
             this.material = material;
         }
-        else{
+        else {
             throw new IllegalArgumentException();
         }
     }
     //method for redefine
-    protected void show(int i){
+    public void show(int i){
         System.out.println(i);
     }
 
-    protected void printMaterial(){
-        System.out.println(buffer + " " + material);
+    public void printMaterial(){
+        System.out.println(buffer + ' ' + material);
     }
 }
 
