@@ -24,16 +24,3 @@ public class Application{
         }
     }
 }
-
-
-
-
-
-
-
-/*
-* List<T> l = new ArrayList<T>();
-* Building b = new Castle(l);
-*
-*
- */
